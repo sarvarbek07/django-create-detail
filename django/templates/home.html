@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+{% for i in object_list %}
+    <h1 style="color: red;">{{i.title}}</h1>
+    <p>{{i.text| slice:100}}</p>
+    <a href="{% url 'detail' i.pk %}">ko`rish</a>
+{% endfor %}
+
+
+
+{% endblock  %}
+
